@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0f172a">
+  <meta name="description" content="M-IT o‘quv markazining Dart bo‘yicha 1-oylik bilim imtihoni">
+  <title>M-IT • Dart bilim imtihoni</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="welcomeModal" class="modal-backdrop">
+    <div class="welcome-modal">
+      <button id="welcomeClose" class="icon-btn" aria-label="Yopish">×</button>
+      <div class="modal-logo">D</div>
+      <div class="modal-kicker">M-IT O‘QUV MARKAZI</div>
+      <h1>Dart bo‘yicha bilim imtihoni</h1>
+      <p>
+        Siz M-IT o‘quv markazida <strong>1-oy davomida Dart dasturlash tili</strong>
+        bilan tanishdingiz. Endi shu oy davomida o‘rgangan mavzularingiz bo‘yicha
+        bilimlaringizni sinab ko‘rish vaqti keldi.
+      </p>
+      <p>
+        Imtihon <strong>2 bosqichdan</strong> iborat: avval 30 ta nazariy test,
+        undan so‘ng 3 ta alohida amaliy topshiriq. Natija yakunda foizda hisoblanadi.
+      </p>
+      <div class="modal-highlight">
+        <span>✓</span>
+        <div>
+          <strong>Imtihon mezoni: 60%</strong>
+          <small>60% yoki undan yuqori natija — imtihondan o‘tgan hisoblanadi.</small>
+        </div>
+      </div>
+      <div class="modal-quote">“Bilimni tekshirish — rivojlanishning keyingi bosqichi.”</div>
+      <button id="welcomeStart" class="primary-btn modal-btn">Imtihonni boshlash <span>→</span></button>
+      <div class="modal-footer">Omad tilaymiz! O‘zingizga ishoning va savollarni diqqat bilan o‘qing.</div>
+    </div>
+  </div>
+
+  <div id="stageModal" class="modal-backdrop hidden">
+    <div class="welcome-modal stage-modal">
+      <div class="modal-logo practical">P</div>
+      <div class="modal-kicker">1-BOSQICH YAKUNLANDI</div>
+      <h1>Amaliy topshiriqlarga o‘tamiz</h1>
+      <p>
+        30 ta nazariy savol yakunlandi. Endi Dart bo‘yicha o‘rgangan bilimlaringizni
+        kod bilan amalda ko‘rsatish vaqti keldi.
+      </p>
+      <p>
+        Keyingi bosqichda sizga <strong>3 ta alohida amaliy masala</strong> beriladi.
+        Har bir masalani VS Code’da bajarib, yechimingizni saytdagi maydonga kiritasiz.
+        Yechim avtomatik tekshiriladi.
+      </p>
+      <div class="modal-highlight blue">
+        <span>2</span>
+        <div>
+          <strong>Amaliy bosqich</strong>
+          <small>3 ta masala • har biri 1 ball • jami 3 ball</small>
+        </div>
+      </div>
+      <button id="stageStart" class="primary-btn modal-btn">Amaliy bosqichni boshlash <span>→</span></button>
+    </div>
+  </div>
+
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark">D</div>
+        <div>
+          <div class="brand-title">M-IT • Dart Exam</div>
+          <div class="brand-subtitle">1-oy yakuniy bilim imtihoni</div>
+        </div>
+      </div>
+      <div class="topbar-right">
+        <div id="stageBadge" class="topbar-badge">30 TEST</div>
+      </div>
+    </header>
+
+    <main class="container">
+
+      <!-- START -->
+      <section id="startScreen" class="screen active">
+        <div class="hero-card">
+          <div class="hero-grid">
+            <div>
+              <div class="hero-kicker">M-IT O‘QUV MARKAZI • DART</div>
+              <h1>1-oy yakuniy<br>bilim imtihoni</h1>
+              <p class="hero-text">
+                Bir oy davomida Dart asoslari bilan tanishdingiz. Endi shu mavzularni
+                qay darajada o‘zlashtirganingizni nazariya va amaliyot orqali sinab ko‘ramiz.
+              </p>
+            </div>
+            <div class="exam-card-preview">
+              <div class="preview-top"><span>IMTIHON</span><span>1–8-BOB</span></div>
+              <div class="preview-number">30</div>
+              <div class="preview-label">nazariy test</div>
+              <div class="preview-line"></div>
+              <div class="preview-row"><span>Amaliy</span><strong>3 ta</strong></div>
+              <div class="preview-row"><span>O‘tish</span><strong>60%</strong></div>
+            </div>
+          </div>
+
+          <div class="scope-note">
+            <div class="scope-icon">✓</div>
+            <div>
+              <strong>Imtihon doirasi</strong>
+              <p>
+                1–8-bob: Dart bilan tanishuv, o‘zgaruvchilar va data type'lar, operatorlar,
+                shartlar, looplar, List/Set/Map, funksiyalar, Null Safety va Exceptions.
+              </p>
+            </div>
+          </div>
+
+          <form id="studentForm" class="student-form">
+            <div class="section-title">O‘quvchi ma’lumotlari</div>
+            <div class="field-grid">
+              <label class="field">
+                <span>Guruh</span>
+                <input id="groupInput" name="group" type="text" placeholder="Masalan: Flutter-01" required>
+              </label>
+              <label class="field">
+                <span>Ism</span>
+                <input id="firstNameInput" name="firstName" type="text" placeholder="Ismingiz" required>
+              </label>
+              <label class="field">
+                <span>Familiya</span>
+                <input id="lastNameInput" name="lastName" type="text" placeholder="Familiyangiz" required>
+              </label>
+            </div>
+            <button class="primary-btn" type="submit">30 ta testni boshlash <span>→</span></button>
+          </form>
+        </div>
+        <div class="footer-note">
+          M-IT o‘quv markazi • Dart bo‘yicha 1-oy yakuniy imtihoni
+        </div>
+      </section>
+
+      <!-- THEORY -->
+      <section id="theoryScreen" class="screen">
+        <div class="exam-head">
+          <div>
+            <div class="eyebrow">1-BOSQICH • NAZARIYA</div>
+            <h2>30 ta nazariy test</h2>
+            <p class="section-intro">Har bir savol uchun bitta javobni tanlang.</p>
+          </div>
+          <div class="student-chip">
+            <span id="studentInitials">OO</span>
+            <div>
+              <strong id="studentNameDisplay">O‘quvchi</strong>
+              <small id="studentGroupDisplay">Guruh</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="progress-card">
+          <div class="progress-meta">
+            <span id="theoryProgressText">0 / 30</span>
+            <span id="theoryAnsweredText">0 ta belgilangan</span>
+          </div>
+          <div class="progress-track"><div id="theoryProgressBar" class="progress-bar"></div></div>
+          <div class="stage-strip">
+            <div class="stage-pill active"><span>1</span> Nazariya</div>
+            <div class="stage-connector"></div>
+            <div class="stage-pill"><span>2</span> Amaliyot</div>
+            <div class="stage-connector"></div>
+            <div class="stage-pill"><span>3</span> Natija</div>
+          </div>
+        </div>
+
+        <form id="theoryForm">
+          <div id="theoryContainer"></div>
+          <div class="submit-area">
+            <div class="submit-hint">
+              <strong>1-bosqichni yakunlash</strong>
+              <span>Javoblarni tekshiring. Keyingi bosqichda 3 ta alohida amaliy masala chiqadi.</span>
+            </div>
+            <button class="primary-btn large" type="submit">Testni yakunlash <span>✓</span></button>
+          </div>
+        </form>
+      </section>
+
+      <!-- PRACTICAL -->
+      <section id="practicalScreen" class="screen">
+        <div class="exam-head">
+          <div>
+            <div class="eyebrow">2-BOSQICH • AMALIYOT</div>
+            <h2>3 ta amaliy topshiriq</h2>
+            <p class="section-intro">Masalani VS Code’da bajaring va yechimingizni shu yerga kiriting.</p>
+          </div>
+          <div class="student-chip">
+            <span id="practicalInitials">OO</span>
+            <div>
+              <strong id="practicalStudentName">O‘quvchi</strong>
+              <small id="practicalStudentGroup">Guruh</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="practical-banner">
+          <div class="banner-icon">⌘</div>
+          <div>
+            <strong>Amaliy ish tartibi</strong>
+            <p>
+              VS Code’da yangi Dart fayl oching, topshiriqni bajaring, kodni tekshirib ko‘ring,
+              so‘ng tayyor kodingizni quyidagi maydonga joylashtiring.
+            </p>
+          </div>
+        </div>
+
+        <form id="practicalForm">
+          <div id="practicalContainer"></div>
+          <div class="submit-area">
+            <div class="submit-hint">
+              <strong>Amaliy bosqichni yakunlash</strong>
+              <span>3 ta masala uchun kodingizni kiriting. Natija nazariya + amaliyot bo‘yicha hisoblanadi.</span>
+            </div>
+            <button class="primary-btn large" type="submit">Amaliyotni tekshirish <span>✓</span></button>
+          </div>
+        </form>
+      </section>
+
+      <!-- RESULT -->
+      <section id="resultScreen" class="screen">
+        <div id="resultHero" class="result-hero">
+          <div class="result-icon" id="resultIcon">✓</div>
+          <div class="result-eyebrow" id="resultEyebrow">NATIJA</div>
+          <h2 id="resultStatus">IMTIHONdan O‘TDI</h2>
+          <p id="resultMessage">Natijangiz hisoblanmoqda.</p>
+        </div>
+
+        <div class="result-summary">
+          <div class="result-score">
+            <div class="score-label">Umumiy natija</div>
+            <div class="score-number" id="scoreNumber">0 / 33</div>
+            <div class="score-percent" id="scorePercent">0%</div>
+          </div>
+          <div class="result-details">
+            <div class="detail-row"><span>O‘quvchi</span><strong id="resultStudent">—</strong></div>
+            <div class="detail-row"><span>Guruh</span><strong id="resultGroup">—</strong></div>
+            <div class="detail-row"><span>Nazariya</span><strong id="theoryScoreResult">0 / 30</strong></div>
+            <div class="detail-row"><span>Amaliyot</span><strong id="practicalScoreResult">0 / 3</strong></div>
+            <div class="detail-row"><span>To‘g‘ri javoblar</span><strong id="correctCount">0</strong></div>
+            <div class="detail-row"><span>O‘tish chegarasi</span><strong>60%</strong></div>
+          </div>
+        </div>
+
+        <div id="thresholdBox" class="threshold-box">
+          <div class="threshold-top">
+            <div class="threshold-title">60% o‘tish mezoni</div>
+            <strong id="thresholdState">—</strong>
+          </div>
+          <div class="threshold-track"><div id="thresholdProgress" class="threshold-progress"></div></div>
+          <div class="threshold-labels"><span>0%</span><span>60%</span><span>100%</span></div>
+        </div>
+
+        <div class="review-head">
+          <div>
+            <div class="eyebrow">NATIJA TAHLILI</div>
+            <h3>Javoblar bo‘yicha ko‘rib chiqish</h3>
+          </div>
+          <span id="reviewCount" class="review-count">33 ta</span>
+        </div>
+
+        <div class="review-tabs">
+          <button id="reviewTheoryTab" class="review-tab active" type="button">Nazariya <span id="reviewTheoryBadge">30</span></button>
+          <button id="reviewPracticalTab" class="review-tab" type="button">Amaliyot <span id="reviewPracticalBadge">3</span></button>
+        </div>
+
+        <div id="reviewContainer" class="review-list"></div>
+
+        <div class="result-actions">
+          <button id="printBtn" class="secondary-btn">Natijani chop etish</button>
+          <button id="restartBtn" class="primary-btn">Qayta topshirish <span>↻</span></button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
